@@ -1,2 +1,0 @@
-# VueNestGraph
-Coolisch base project
