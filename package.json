@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "@nrwl/cypress": "^14.0.0",
+    "@nrwl/jest": "^14.0.0",
+    "@nrwl/linter": "^14.0.0",
+    "@nx-plus/vue": "^14.1.0"
+  }
+}
