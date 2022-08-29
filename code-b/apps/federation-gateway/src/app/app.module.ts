@@ -15,7 +15,7 @@ import { GraphQLModule } from '@nestjs/graphql';
       gateway: {
         supergraphSdl: new IntrospectAndCompose({
           subgraphs: [
-            { name: 'backend', url: 'https://countries.trevorblades.com/' }, //backend monolith (test)
+            { name: 'backend', url: 'http://localhost:3333/graphql' }, //backend monolith (test)
           ],
         }),
       },
