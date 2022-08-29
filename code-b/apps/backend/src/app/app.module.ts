@@ -15,6 +15,7 @@ import { PostsResolver } from './posts/posts.resolver';
       playground: true,
       autoSchemaFile: true,
     }),
+    // this is the proper way
     // TypeOrmModule.forRootAsync({
     //   imports: [ConfigModule],
     //   useFactory: (configService: ConfigService) => ({
