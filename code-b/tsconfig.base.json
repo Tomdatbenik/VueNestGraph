@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@code-b/libs/models": ["packages/libs/models/src/index.ts"],
+      "@code-b/models": ["libs/models/src/index.ts"],
       "@code-b/services": ["libs/services/src/index.ts"]
     }
   },

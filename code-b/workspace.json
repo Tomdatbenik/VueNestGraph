@@ -5,6 +5,7 @@
     "backend": "apps/backend",
     "federation-gateway": "apps/federation-gateway",
     "frontend": "apps/frontend",
+    "models": "libs/models",
     "services": "libs/services"
   }
 }
