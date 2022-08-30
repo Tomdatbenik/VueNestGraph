@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@code-b/base": ["libs/base/src/index.ts"],
       "@code-b/models": ["libs/models/src/index.ts"],
       "@code-b/services": ["libs/services/src/index.ts"]
     }

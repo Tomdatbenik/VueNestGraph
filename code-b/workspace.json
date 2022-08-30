@@ -3,6 +3,7 @@
   "version": 2,
   "projects": {
     "backend": "apps/backend",
+    "base": "libs/base",
     "federation-gateway": "apps/federation-gateway",
     "frontend": "apps/frontend",
     "models": "libs/models",

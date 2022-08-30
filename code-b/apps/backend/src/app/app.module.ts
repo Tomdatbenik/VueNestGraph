@@ -1,14 +1,13 @@
-
 import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
-import { ApolloDriver, ApolloDriverConfig, ApolloFederationDriver } from '@nestjs/apollo';
+import { ApolloDriverConfig, ApolloFederationDriver } from '@nestjs/apollo';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import Posts from './db/enitities/posts.enitity';
 import { PostsModule } from './posts/posts.module';
-import { PostsResolver } from './posts/posts.resolver';
 
 @Module({
-  imports: [PostsModule,
+  imports: [
+    PostsModule,
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloFederationDriver,
       debug: true,
@@ -44,4 +43,4 @@ import { PostsResolver } from './posts/posts.resolver';
     }),
   ],
 })
-export class AppModule { }
+export class AppModule {}
