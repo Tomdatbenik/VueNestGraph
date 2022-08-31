@@ -1,13 +1,19 @@
 import { DefaultCrudResolver } from '@code-b/base';
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import Posts from '../db/enitities/posts.enitity';
+import Post from '../db/enitities/posts.enitity';
 import { PostsController } from './posts.controller';
-import { PostsResolver } from './posts.resolver';
-import { PostsService } from './posts.service';
+import { NestjsQueryGraphQLModule } from '@nestjs-query/query-graphql';
+import { NestjsQueryTypeOrmModule } from '@nestjs-query/query-typeorm';
+
 @Module({
-  imports: [TypeOrmModule.forFeature([Posts])],
+  imports: [
+    NestjsQueryGraphQLModule.forFeature({
+      imports: [NestjsQueryTypeOrmModule.forFeature([Post])],
+      resolvers: [{ DTOClass: Post, EntityClass: Post }],
+    }),
+  ],
   controllers: [PostsController],
-  providers: [DefaultCrudResolver(Posts)],
+  providers: [DefaultCrudResolver(Post)],
 })
-export class PostsModule { }
+export class PostsModule {}

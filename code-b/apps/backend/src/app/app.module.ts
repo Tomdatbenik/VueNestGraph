@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriverConfig, ApolloFederationDriver } from '@nestjs/apollo';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import Posts from './db/enitities/posts.enitity';
+import Post from './db/enitities/posts.enitity';
 import { PostsModule } from './posts/posts.module';
 
 @Module({
@@ -37,7 +37,7 @@ import { PostsModule } from './posts/posts.module';
         username: 'root',
         password: 'secret',
         database: 'postgres',
-        entities: [Posts],
+        entities: [Post],
         synchronize: true,
       }),
     }),
