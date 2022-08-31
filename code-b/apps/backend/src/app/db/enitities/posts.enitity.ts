@@ -1,14 +1,11 @@
-import { Field, ObjectType } from '@nestjs/graphql';
+import { Field, InputType, ObjectType } from '@nestjs/graphql';
 import { IPosts } from '@code-b/models';
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
-
+import { Column, Entity } from 'typeorm';
+import { BaseEntity } from './base';
+@InputType('postsInput')
 @Entity()
-@ObjectType()
-export default class Posts implements IPosts {
-    @PrimaryGeneratedColumn()
-    @Field()
-    id: number;
-
+@ObjectType('postsType')
+export default class Posts extends BaseEntity implements IPosts {
     @Column()
     @Field()
     title: string;

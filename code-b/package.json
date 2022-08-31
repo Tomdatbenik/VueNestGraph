@@ -70,6 +70,7 @@
     "@nestjs/typeorm": "^9.0.1",
     "@sampullman/fetch-api": "^0.7.0",
     "apollo-server-express": "^3.10.2",
+    "class-validator": "^0.13.2",
     "date-fns": "^2.29.1",
     "graphql": "^16.6.0",
     "pg": "^8.8.0",

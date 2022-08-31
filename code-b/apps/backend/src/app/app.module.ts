@@ -43,4 +43,4 @@ import { PostsModule } from './posts/posts.module';
     }),
   ],
 })
-export class AppModule {}
+export class AppModule { }

@@ -1,4 +1,4 @@
-import { BaseResolver } from '@code-b/base';
+import { DefaultCrudResolver } from '@code-b/base';
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import Posts from '../db/enitities/posts.enitity';
@@ -8,6 +8,6 @@ import { PostsService } from './posts.service';
 @Module({
   imports: [TypeOrmModule.forFeature([Posts])],
   controllers: [PostsController],
-  providers: [PostsResolver, BaseResolver(Posts), PostsService],
+  providers: [DefaultCrudResolver(Posts)],
 })
-export class PostsModule {}
+export class PostsModule { }

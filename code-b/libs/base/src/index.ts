@@ -1,1 +1,1 @@
-export * from './lib/BaseResolver';
+export * from './lib/DefaultCrudResolver';

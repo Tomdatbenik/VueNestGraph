@@ -9,7 +9,7 @@ export class PostsService implements IBaseService<Posts> {
   constructor(
     @InjectRepository(Posts)
     private postsRepository: Repository<Posts>
-  ) {}
+  ) { }
 
   findAll(): Promise<Posts[]> {
     return this.postsRepository.find();
